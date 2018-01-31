@@ -1,8 +1,6 @@
 # HCSS
 
-[![Build Status](https://travis-ci.org/thulioph/spotify-tips.svg?branch=tests)](https://travis-ci.org/thulioph/spotify-tips) [![Coverage Status](https://coveralls.io/repos/github/thulioph/spotify-tips/badge.svg?branch=master)](https://coveralls.io/github/thulioph/spotify-tips?branch=master)
-
-> Hacker News simple Scrappy aka *HCSS*.
+> Hacker News Simple Scrappy
 
 This project is a study case of web scrappy, using [X-Ray](https://github.com/matthewmueller/x-ray) with Nodejs to get the latest information at [news.ycombinator](https://news.ycombinator.com).
 
