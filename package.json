@@ -4,7 +4,8 @@
   "description": "A web scrappy with XRay and Nodejs to get the Hacker News information.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js --exec babel-node --presets es2015"
+    "dev:server": "nodemon index.js --exec babel-node --presets es2015",
+    "start": "node index.js --exec babel-node --presets es2015"
   },
   "keywords": [],
   "author": "Thulio Philipe <thulioph@gmail.com> (http://thulioph.com/)",
