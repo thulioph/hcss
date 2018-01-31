@@ -1,10 +1,10 @@
 # HCSS
 
-> Hacker News Simple Scrappy
+> Hacker News Simple Scrapy
 
-This project is a study case of web scrappy, using [X-Ray](https://github.com/matthewmueller/x-ray) with Nodejs to get the latest information at [news.ycombinator](https://news.ycombinator.com).
+This project is a study case of web scrapy, using [X-Ray](https://github.com/matthewmueller/x-ray) with Nodejs to get the latest information at [news.ycombinator](https://news.ycombinator.com).
 
-You can see a live demo [here]().
+You can see a live demo [here](https://hcss.herokuapp.com/).
 
 ## Setup
 
