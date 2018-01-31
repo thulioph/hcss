@@ -6,7 +6,7 @@ const express = require('express');
 
 const app = express();
 
-const PORT = 3000;
+const PORT = (process.env.PORT || 3000);
 const FILE_NAME = 'results.json';
 const FILE_PATH = path.join(__dirname, `${FILE_NAME}`);
 
