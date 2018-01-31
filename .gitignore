@@ -1,0 +1,11 @@
+# App modules
+/node_modules
+
+# Result file
+/results.json
+
+# System files
+.DS_Store
+
+# Lock files
+yarn.lock
