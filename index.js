@@ -11,7 +11,7 @@ const FILE_NAME = 'results.json';
 const FILE_PATH = path.join(__dirname, `${FILE_NAME}`);
 
 import hcRoute from './routes/hc';
-import resultRout from './routes/result';
+import resultRoute from './routes/result';
 
 // ====
 
@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
 
 // Hacker News
 app.get('/hc', (req, res) => hcRoute(res, FILE_NAME));
-app.get('/hc/result', (req, res) => resultRout(res, FILE_PATH));
+app.get('/hc/result', (req, res) => resultRoute(res, FILE_PATH));
 
 // ====
 
