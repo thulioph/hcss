@@ -1,12 +1,16 @@
 (function () {
     'use strict';
 
+    const BASE_URL = 'https://hcss.herokuapp.com';
+
+    // ====
+
     const techCrunchBtn = document.querySelector('#tech-crunch-button');
     const techTable = document.querySelector('#techcrunch-table');
     const techList = document.querySelector('#techcrunch-list');
 
-    const TECHCRUNCH_URL = 'http://localhost:3000/techcrunch';
-    const TECHCRUNCH_RESULT_URL = 'http://localhost:3000/techcrunch/result';
+    const TECHCRUNCH_URL = `${BASE_URL}/techcrunch`;
+    const TECHCRUNCH_RESULT_URL = `${BASE_URL}/techcrunch/result`;
 
     techCrunchBtn.addEventListener('click', (evt) => {
         evt.preventDefault();
@@ -21,8 +25,8 @@
     const hcList = document.querySelector('#hc-list');
     const hcTable = document.querySelector('#hc-table');
 
-    const HC_URL = 'http://localhost:3000/hc';
-    const RESULT_URL = 'http://localhost:3000/hc/result';
+    const HC_URL = `${BASE_URL}/hc`;
+    const RESULT_URL = `${BASE_URL}/hc/result`;
 
     hcBtn.addEventListener('click', (evt) => {
         evt.preventDefault();
