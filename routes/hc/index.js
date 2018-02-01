@@ -9,14 +9,20 @@ const hcRoute = (res, fileName) => {
 
     x('https://news.ycombinator.com', {
         entry: 'title',
-        items: x('.athing', [{
-            url: '.storylink@href',
-            description: '.title a'
-        }]),
-        author: x('.subtext', [{
-            name: '.hnuser',
-            score: '.score'
-        }]),
+        links: x('.athing', [
+            {
+                url: '.storylink@href',
+                description: '.title a',
+            }
+        ]),
+        author: x('.subtext', [
+            {
+                name: '.hnuser',
+                url: '.hnuser@href',
+                score: '.score',
+                timestamp: '.age a'
+            }
+        ]),
     })((err, obj) => {
         if (!err) {
             fsWrite(fileName, obj, 'utf8', res);
