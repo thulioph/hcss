@@ -17,11 +17,17 @@ import resultRout from './routes/result';
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static('client'));
 
 // ====
 
+app.get('/', (req, res) => {
+    res.sendFile('client/index.html', { root: __dirname });
+});
+
+// Hacker News
 app.get('/hc', (req, res) => hcRoute(res, FILE_NAME));
-app.get('/result', (req, res) => resultRout(res, FILE_PATH));
+app.get('/hc/result', (req, res) => resultRout(res, FILE_PATH));
 
 // ====
 
