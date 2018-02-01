@@ -5,8 +5,8 @@
     const hcList = document.querySelector('#hc-list');
     const hcTable = document.querySelector('#hc-table');
 
-    const HC_URL = 'http://localhost:3000/hc';
-    const RESULT_URL = 'http://localhost:3000/hc/result';
+    const HC_URL = 'https://hcss.herokuapp.com/hc';
+    const RESULT_URL = 'https://hcss.herokuapp.com/hc/result';
 
     // ====
 
