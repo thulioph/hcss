@@ -2,7 +2,7 @@ const fs = require('fs');
 
 // ====
 
-const resultRout = (res, filePath) => {
+const resultRoute = (res, filePath) => {
     fs.readFile(filePath, 'utf8', (err, data) => {
         if (err) {
             res.json({
@@ -24,4 +24,4 @@ const resultRout = (res, filePath) => {
 
 // ====
 
-export default resultRout;
+export default resultRoute;
