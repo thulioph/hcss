@@ -21,12 +21,14 @@
         <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
             <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
                 <a href="#" id="hacker-news-button" class="mdl-layout__tab">Hacker News</a>
+                <a href="#" id="tech-crunch-button" class="mdl-layout__tab">TechCrunch</a>
             </div>
         </header>
 
         <main class="mdl-layout__content">
             <div class="mdl-layout__tab-panel is-active" id="overview">
-                <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                <section class="section--center mdl-cell mdl-cell--12-col">
+                    <!-- Hacker News Table -->
                     <table id="hc-table" class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp is-hidden">
                         <thead>
                             <tr>
@@ -38,6 +40,21 @@
                         </thead>
 
                         <tbody id="hc-list">
+                        </tbody>
+                    </table>
+                    
+                    <!-- TechCrunch Table -->
+                    <table id="techcrunch-table" class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp is-hidden">
+                        <thead>
+                            <tr>
+                                <th>Author</th>
+                                <th>Hour</th>
+                                <th>Title</th>
+                                <th>Link</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="techcrunch-list">
                         </tbody>
                     </table>
                 </section>

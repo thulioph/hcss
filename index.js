@@ -12,6 +12,7 @@ const FILE_PATH = path.join(__dirname, `${FILE_NAME}`);
 
 import hcRoute from './routes/hc';
 import resultRoute from './routes/result';
+import techCrunchRoute from './routes/techcrunch';
 
 // ====
 
@@ -21,13 +22,15 @@ app.use(express.static('client'));
 
 // ====
 
-app.get('/', (req, res) => {
-    res.sendFile('client/index.html', { root: __dirname });
-});
+app.get('/', (req, res) => res.sendFile('client/index.html', { root: __dirname }));
 
 // Hacker News
 app.get('/hc', (req, res) => hcRoute(res, FILE_NAME));
 app.get('/hc/result', (req, res) => resultRoute(res, FILE_PATH));
+
+// Last FM
+app.get('/techcrunch', (req, res) => techCrunchRoute(res, FILE_NAME));
+app.get('/techcrunch/result', (req, res) => resultRoute(res, FILE_PATH));
 
 // ====
 

@@ -1,6 +1,6 @@
 const Xray = require('x-ray');
 
-import { fsWrite } from './utils';
+import { fsWrite } from '../utils';
 
 // ====
 
