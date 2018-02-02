@@ -117,6 +117,7 @@
         links.map((link, linkIdx) => link.author = author[linkIdx]);
 
         updateHeaderTitle(entry);
+        toggleSectionClass('hacker-news');
         
         const markup = createHackerNewsMarkup(links);
         hcList.innerHTML = markup;
@@ -174,6 +175,7 @@
         const { posts, entry } = obj;
 
         updateHeaderTitle(entry);
+        toggleSectionClass('tech-crunch');
 
         const markup = createTechCrunchMarkup(posts);
         techList.innerHTML = markup;
