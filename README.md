@@ -1,6 +1,6 @@
 # Node Spider
 
-> More one web scraping on the web \o/
+> With great power comes great responsibility!
 
 This project is an experiment, to discover how web scraping works.  We are getting data from [news.ycombinator](https://news.ycombinator.com) and [techcrunch.com](https://techcrunch.com/mobile/).
 
