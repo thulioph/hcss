@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    const BASE_URL = 'http://localhost:3000' || 'https://node-spider.herokuapp.com';
+    const BASE_URL = 'https://node-spider.herokuapp.com';
     const headerTitle = document.querySelector('#header-title');
 
     // ====
