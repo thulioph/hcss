@@ -1,7 +1,8 @@
 (function () {
     'use strict';
 
-    const BASE_URL = 'https://node-spider.herokuapp.com';
+    const BASE_URL = 'http://localhost:3000' || 'https://node-spider.herokuapp.com';
+    const headerTitle = document.querySelector('#header-title');
 
     // ====
 
@@ -15,7 +16,11 @@
     techCrunchBtn.addEventListener('click', (evt) => {
         evt.preventDefault();
 
+        updateHeaderTitle('Loading...');
+
         toggleClass(evt.currentTarget);
+        toggleContainerClass(evt.currentTarget.id);
+
         getTechCrunchData();
     });
 
@@ -31,11 +36,34 @@
     hcBtn.addEventListener('click', (evt) => {
         evt.preventDefault();
 
+        updateHeaderTitle('Loading...');
+
         toggleClass(evt.currentTarget);
+        toggleContainerClass(evt.currentTarget.id);
+
         getHackerNewsData();
     });
 
     // ====
+
+    const updateHeaderTitle = (string) => {
+        headerTitle.innerHTML = string;
+    };
+
+    const toggleContainerClass = (id) => {
+        let activeContainer, inactiveContainer;
+
+        if (id.search('hacker-news') != -1) {
+            activeContainer = document.querySelector('#hacker-news');
+            inactiveContainer = document.querySelector('#tech-crunch');
+        } else if (id.search('tech-crunch') != -1) {
+            activeContainer = document.querySelector('#tech-crunch');
+            inactiveContainer = document.querySelector('#hacker-news');
+        }
+
+        inactiveContainer.classList.remove('is-active');
+        activeContainer.classList.add('is-active');
+    }
 
     const toggleClass = (clickedElement) => {
         const elements = document.querySelectorAll('a.mdl-layout__tab');
@@ -69,14 +97,17 @@
     };
 
     const displayHackerNewsData = (obj) => {
-        const { links, author } = obj;
+        const { links, author, entry } = obj;
 
         links.map((link, linkIdx) => link.author = author[linkIdx]);
 
+        updateHeaderTitle(entry);
+        
         const markup = createHackerNewsMarkup(links);
         hcList.innerHTML = markup;
 
         hcTable.classList.remove('is-hidden');
+        techTable.classList.add('is-hidden');
     };
 
     const createHackerNewsMarkup = (links) => {
@@ -127,10 +158,13 @@
     const displayTechCrunchData = (obj) => {
         const { posts, entry } = obj;
 
+        updateHeaderTitle(entry);
+
         const markup = createTechCrunchMarkup(posts);
         techList.innerHTML = markup;
 
         techTable.classList.remove('is-hidden');
+        hcTable.classList.add('is-hidden');
     };
 
     const createTechCrunchMarkup = (posts) => {
