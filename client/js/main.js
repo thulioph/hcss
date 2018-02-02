@@ -50,6 +50,21 @@
         headerTitle.innerHTML = string;
     };
 
+    const toggleSectionClass = (id) => {
+        let activeSection, inactiveSection;
+
+        if (id.search('hacker-news') != -1) {
+            activeSection = document.querySelector('#hacker-news section');
+            inactiveSection = document.querySelector('#tech-crunch section');
+        } else if (id.search('tech-crunch') != -1) {
+            activeSection = document.querySelector('#tech-crunch section');
+            inactiveSection = document.querySelector('#hacker-news section');
+        }
+
+        activeSection.classList.remove('is-hidden');
+        inactiveSection.classList.add('is-hidden');
+    };
+
     const toggleContainerClass = (id) => {
         let activeContainer, inactiveContainer;
 
@@ -63,7 +78,7 @@
 
         inactiveContainer.classList.remove('is-active');
         activeContainer.classList.add('is-active');
-    }
+    };
 
     const toggleClass = (clickedElement) => {
         const elements = document.querySelectorAll('a.mdl-layout__tab');
