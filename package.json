@@ -17,5 +17,8 @@
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "x-ray": "^2.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.12"
   }
 }
