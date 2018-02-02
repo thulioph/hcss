@@ -1,28 +1,29 @@
-# HCSS
+# Node Spider
 
-> Hacker News Simple Scrapy
+> With great power comes great responsibility!
 
-This project is a study case of web scrapy, using [X-Ray](https://github.com/matthewmueller/x-ray) with Nodejs to get the latest information at [news.ycombinator](https://news.ycombinator.com).
+This project is an experiment, to discover how web scraping works.  We are getting data from [news.ycombinator](https://news.ycombinator.com) and [techcrunch.com](https://techcrunch.com/mobile/).
 
-You can see a live demo [here](https://hcss.herokuapp.com/).
+You can see a live demo [here](http://node-spider.herokuapp.com/).
 
 ## Setup
 
 ```shell
-$ npm install 
+$ yarn install 
 ```
 
 ## Running
 
 ```shell
-$ npm start
+$ yarn dev:server
 ```
 
 ## Technologies
 
+- [Nodejs](https://nodejs.org/en/download/)
 - [X-Ray](https://github.com/matthewmueller/x-ray)
-- [Nodemon](https://nodemon.io/)
 - [Express](http://expressjs.com/)
+- [Nodemon](https://nodemon.io/)
 
 ## License
 

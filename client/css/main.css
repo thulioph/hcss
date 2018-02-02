@@ -51,8 +51,8 @@ html, body {
 }
 .mdl-demo .mdl-layout__tab-bar .mdl-layout__tab.is-active {
   color: rgb(255,171,64) !important;
+  border-bottom: 5px solid rgb(255,171,64) !important;
 }
-
 .mdl-demo .mdl-layout__tab-bar .mdl-layout__tab.is-active::after {
   background-color: white;
   height: 4px;
@@ -60,6 +60,10 @@ html, body {
 .mdl-demo main > .mdl-layout__tab-panel {
   padding: 8px;
   padding-top: 48px;
+  display: none;
+}
+.mdl-demo main > .mdl-layout__tab-panel.is-active {
+  display: block;
 }
 .mdl-demo .mdl-card {
   height: auto;
@@ -211,11 +215,49 @@ html, body {
   z-index: 99;
 }
 
-table.is-hidden {
-  visibility: hidden;
+.is-hidden {
+   visibility: hidden; 
+  /* display: none; */
 }
 
 .mdl-data-table td,
 .mdl-data-table th {
   text-align: left;
+}
+
+/* Octocat  */
+
+.github-corner {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 5;
+}
+
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+
+@keyframes octocat-wave {
+  0%, 100% {
+    transform: rotate(0)
+  }
+
+  20%, 60% { 
+    transform: rotate(-25deg)
+  }
+
+  40%, 80% {
+    transform: rotate(10deg)
+  }
+}
+
+@media (max-width:500px) {
+  .github-corner:hover .octo-arm {
+    animation: none
+  }
+
+  .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out
+  }
 }

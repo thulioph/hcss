@@ -4,7 +4,8 @@
   "description": "A web scrappy with XRay and Nodejs to get the Hacker News information.",
   "main": "index.js",
   "scripts": {
-    "dev:server": "nodemon index.js --exec babel-node --presets es2015",
+    "preinstall": "npm install -g babel-cli",
+    "dev:server": "./node_modules/.bin/nodemon index.js --exec babel-node --presets es2015",
     "start": "babel-node index.js --presets es2015"
   },
   "keywords": [],
@@ -16,5 +17,8 @@
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "x-ray": "^2.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.12"
   }
 }
