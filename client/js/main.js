@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    const BASE_URL = 'https://hcss.herokuapp.com';
+    const BASE_URL = 'https://node-spider.herokuapp.com';
 
     // ====
 
